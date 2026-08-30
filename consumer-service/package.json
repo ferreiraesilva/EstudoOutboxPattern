@@ -1,0 +1,13 @@
+﻿{
+  "name": "consumer-service",
+  "version": "1.0.0",
+  "description": "Downstream Kafka Consumer service for CDC Outbox events",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "kafkajs": "^2.2.4"
+  }
+}

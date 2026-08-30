@@ -1,0 +1,14 @@
+﻿{
+  "name": "aggregator-service",
+  "version": "1.0.0",
+  "description": "Stage 2 Aggregator Worker reading raw CDC, consolidating ERP records, and inserting into outbox_events",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "kafkajs": "^2.2.4",
+    "pg": "^8.11.5"
+  }
+}

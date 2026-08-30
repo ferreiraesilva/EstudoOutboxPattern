@@ -1,0 +1,9 @@
+﻿{
+  "name": "sms-service",
+  "version": "1.0.0",
+  "description": "Idempotent SMS Notification Consumer Service",
+  "main": "index.js",
+  "type": "module",
+  "scripts": { "start": "node index.js" },
+  "dependencies": { "kafkajs": "^2.2.4" }
+}
