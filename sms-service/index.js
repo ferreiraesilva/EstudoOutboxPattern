@@ -1,8 +1,8 @@
 ﻿import { Kafka } from 'kafkajs';
 
 const kafkaBroker = process.env.KAFKA_BROKER || 'kafka:9092';
-const topic = 'app.public.outbox_events';
-const groupId = 'sms-consumer-group-v1';
+const topic = process.env.TOPIC || 'app.public.outbox_events';
+const groupId = process.env.GROUP_ID || 'sms-consumer-group-v1';
 
 const kafka = new Kafka({ clientId: 'sms-service', brokers: [kafkaBroker] });
 const consumer = kafka.consumer({ groupId });

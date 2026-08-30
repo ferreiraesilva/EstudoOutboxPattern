@@ -1,8 +1,8 @@
 ﻿import { Kafka } from 'kafkajs';
 
 const kafkaBroker = process.env.KAFKA_BROKER || 'kafka:9092';
-const topic = 'app.public.outbox_events';
-const groupId = 'whatsapp-consumer-group-v1';
+const topic = process.env.TOPIC || 'app.public.outbox_events';
+const groupId = process.env.GROUP_ID || 'whatsapp-consumer-group-v1';
 
 const kafka = new Kafka({ clientId: 'whatsapp-service', brokers: [kafkaBroker] });
 const consumer = kafka.consumer({ groupId });
